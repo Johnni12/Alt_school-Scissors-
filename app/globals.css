@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.stats {
+  @apply bg-gray-500 bg-opacity-75 text-gray-800;
+  padding: 6.1rem 14rem;
+  display: flex;
+  justify-content: center;
+  gap: 12rem;
+}
+
+.scissors-info {
+  margin-bottom: 13rem;
+  line-height: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6.7rem;
+}
+
+.stat {
+  @apply text-4xl font-semibold;
+}
+
+.stat-texts {
+  display: flex;
+  gap: 7.2rem;
+}
