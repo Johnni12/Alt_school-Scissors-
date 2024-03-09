@@ -4,10 +4,10 @@
 
 .stats {
   @apply bg-gray-500 bg-opacity-75 text-gray-800;
-  padding: 6.1rem 14rem;
+  padding: 4rem 2rem;
   display: flex;
   justify-content: center;
-  gap: 12rem;
+  gap: 6rem;
 }
 
 .scissors-info {
@@ -15,7 +15,7 @@
   line-height: 2.4rem;
   display: flex;
   flex-direction: column;
-  gap: 6.7rem;
+  gap: 3rem;
 }
 
 .stat {
@@ -23,6 +23,38 @@
 }
 
 .stat-texts {
+  color:#eee;
   display: flex;
   gap: 7.2rem;
+}
+
+/*FEATURES*/
+.info {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-scissors {
+  display: grid;
+  align-self: flex-start;
+  grid-template-columns: auto 37rem;
+  column-gap: 1.1rem;
+  row-gap: 1.6rem;
+}
+
+.why-text {
+  font-family: Gilroy-Bold,sans-serif;
+  font-size: 2.5rem;
+  line-height: 4.2rem;
+  align-self: center;
+}
+
+.info-blocks {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.8rem;
+  row-gap: 6.4rem;
 }
