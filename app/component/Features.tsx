@@ -15,7 +15,7 @@ const Features = () => {
         />
         <div className='max-w-[70%]'>
           <p className='why-text font-bold '>
-            Why choose <span>Scissors</span>
+            Why choose <span className='text-[#0065fe]'>Scissors</span>
           </p>
           <p>
             Scissors is the hub of everything that has to do with your link

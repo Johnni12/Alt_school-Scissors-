@@ -2,31 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.stats {
-  @apply bg-gray-500 bg-opacity-75 text-gray-800;
-  padding: 4rem 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 6rem;
-}
-
-.scissors-info {
-  margin-bottom: 13rem;
-  line-height: 2.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.stat {
-  @apply text-4xl font-semibold;
-}
-
-.stat-texts {
-  color:#eee;
-  display: flex;
-  gap: 7.2rem;
-}
 
 /*FEATURES*/
 .info {
@@ -34,6 +9,8 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
+   margin-top: 5rem;
+   margin-bottom: 5rem;
 }
 
 .why-scissors {
@@ -42,10 +19,11 @@
   grid-template-columns: auto 37rem;
   column-gap: 1.1rem;
   row-gap: 1.6rem;
+ 
 }
 
 .why-text {
-  font-family: Gilroy-Bold,sans-serif;
+  font-family: Gilroy-Bold, sans-serif;
   font-size: 2.5rem;
   line-height: 4.2rem;
   align-self: center;
@@ -57,4 +35,39 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2.8rem;
   row-gap: 6.4rem;
+}
+
+/*PRICING*/
+
+.pricing {
+  @apply bg-gray-800;
+  padding-bottom: 11.2rem;
+}
+
+.price-intro {
+  @apply font-bold text-4xl;
+}
+
+.price-block {
+  @apply flex justify-center items-center;
+}
+
+.box {
+  @apply w-96 border border-gray-300 rounded-lg p-6 shadow-md flex flex-col items-start gap-6;
+}
+
+.price-title {
+  @apply text-xl font-semibold;
+}
+
+.price {
+  @apply text-2xl font-bold;
+}
+
+.price-subtitle {
+  @apply text-base font-semibold;
+}
+
+.price-btn {
+  @apply flex gap-4;
 }
