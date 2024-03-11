@@ -2,30 +2,29 @@ import Image from 'next/image'
 
 const Features = () => {
   return (
-    <div className='info max-w-[80%] m-auto text-white p-0 '>
-      <div
-        className='why-scissors grid grid-cols-auto-1fr gap-x-2 gap-y-2
-       '
-      >
-        <Image
-          src='/image/line.png'
-          alt='horizontal grey line gradient'
-          width={50}
-          height={50}
-        />
-        <div className='max-w-[70%]'>
-          <p className='why-text font-bold '>
-            Why choose <span className='text-[#0065fe]'>Scissors</span>
-          </p>
-          <p>
-            Scissors is the hub of everything that has to do with your link
-            management. We shorten your URLs, allow you to create custom ones
-            for your personal, business, event usage. Our swift QR code
-            creation, management, and usage tracking with advanced analytics for
-            all of these is second to none.
-          </p>
-        </div>
+    <div className='justify-content py-12 max-w-[80%]  md:flex text-white mx-auto gap-6 '>
+      <div className='max-w-[50%]'>
+        <p className='why-text font-bold  '>
+          <span className='pr-4'>
+            <Image
+              src='/image/line.png'
+              alt='horizontal grey line gradient'
+              width={5}
+              height={5}
+              className='inline-block '
+            />
+          </span>
+          Why choose <span className='text-[#0065fe]'>Scissors</span>
+        </p>
+        <p>
+          Scissors is the hub of everything that has to do with your link
+          management. We shorten your URLs, allow you to create custom ones for
+          your personal, business, event usage. Our swift QR code creation,
+          management, and usage tracking with advanced analytics for all of
+          these is second to none.
+        </p>
       </div>
+
       <div className='info-blocks grid grid-cols-1fr-1fr gap-x-8 gap-y-8 w-96'>
         <div className='info-block flex flex-col flex-start'>
           <Image
