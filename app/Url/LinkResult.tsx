@@ -1,3 +1,4 @@
+'use client'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
@@ -7,6 +8,7 @@ interface LinkResultProps {
 }
 
 const LinkResult: React.FC<LinkResultProps> = ({ inputValue }) => {
+  console.log(inputValue)
   const [shortenLink, setShortenLink] = useState<string>('')
   const [copied, setCopied] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false)
@@ -19,6 +21,7 @@ const LinkResult: React.FC<LinkResultProps> = ({ inputValue }) => {
         `https://api.shrtco.de/v2/shorten?url=${inputValue}`
       )
       setShortenLink(res.data.result.full_short_link)
+      console.log(res)
     } catch (err: any) {
       if (axios.isAxiosError(err)) {
         setError(err.response?.data?.error ?? 'An error occurred')
@@ -54,7 +57,7 @@ const LinkResult: React.FC<LinkResultProps> = ({ inputValue }) => {
   return (
     <>
       {shortenLink && (
-        <div className='result'>
+        <div>
           <p>{shortenLink}</p>
           <CopyToClipboard text={shortenLink} onCopy={() => setCopied(true)}>
             <button className={copied ? 'copied' : ''}>

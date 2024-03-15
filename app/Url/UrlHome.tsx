@@ -1,4 +1,4 @@
-'use client'
+/*'use client'
 import { useState } from 'react'
 import InputShortener from './page'
 import LinkResult from './LinkResult'
@@ -14,4 +14,4 @@ function UrlHome() {
   )
 }
 
-export default UrlHome
+export default UrlHome*/
