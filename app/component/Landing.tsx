@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Landing = () => {
   return (
-    <section className='max-w-[90%] text-white  mx-auto md:pb-6  md:mt-4 md:max-w-[70%] '>
+    <section className='max-w-[90%] text-white pt-[8rem] mx-auto md:pb-6  md:mt-4 md:max-w-[70%] '>
       <div className='md:flex items-center justify-center'>
         <div>
           <h1 className='text-2xl font-semibold text-center md:leading-loose md:text-5xl'>

@@ -1,134 +1,154 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+interface FooterColumnProps {
+  title: string
+  links: string[]
+}
+
+const FooterColumn: React.FC<FooterColumnProps> = ({ title, links }) => (
+  <ul className='list-none'>
+    <li className='text-lg font-semibold py-2'>{title}</li>
+    {links.map((link, index) => (
+      <li key={index}>{link}</li>
+    ))}
+  </ul>
+)
+
+interface FooterLinkProps {
+  href: string
+  children: React.ReactNode
+}
+
+const FooterLink: React.FC<FooterLinkProps> = ({ href, children }) => (
+  <Link href={href}>
+    {children}
+  </Link>
+)
+
+const FooterSeparator: React.FC = () => (
+  <Image
+    src='/image/line.png'
+    alt='horizontal line vector'
+    width={2}
+    height={2}
+  />
+)
+
 const Footer = () => {
   return (
-    <footer className='relative'>
-      <div className='flex justify-center gap-12 mt-24 text-white'>
-        <div className='flex flex-col gap-8'>
+    <footer className='relative text-white py-12 px-4 sm:px-8 lg:px-16 xl:px-24'>
+      <div className='flex flex-col sm:flex-row justify-center sm:justify-between gap-12 mt-8'>
+        <div className='flex flex-col items-center sm:items-start gap-8'>
           <h1 className='font-semibold'>SCISSORS</h1>
-
-          <div className='flex items-center gap-6'>
-            <Link href=''>
+          <div className='flex gap-6'>
+            <FooterLink href=''>
               <Image
                 src='/image/x.png'
                 alt='X icon'
                 width={30}
                 height={30}
-                className='bg-white '
+                className='bg-white'
               />
-            </Link>
-            <Link href=''>
+            </FooterLink>
+            <FooterLink href=''>
               <Image
                 src='/image/ig.png'
                 alt='instagram icon'
                 width={30}
                 height={30}
-                className='bg-white '
+                className='bg-white'
               />
-            </Link>
-            <Link href=''>
+            </FooterLink>
+            <FooterLink href=''>
               <Image
                 src='/image/linkedin.png'
                 alt='linkedin icon'
                 width={30}
                 height={30}
-                className='bg-white '
+                className='bg-white'
               />
-            </Link>
-            <Link href=''>
+            </FooterLink>
+            <FooterLink href=''>
               <Image
                 src='/image/fb.svg'
                 alt='facebook icon'
                 width={30}
                 height={30}
-                className='bg-white '
+                className='bg-white'
               />
-            </Link>
+            </FooterLink>
           </div>
         </div>
-        <div className='grid grid-cols-4 gap-10'>
-          <ul className='list-none'>
-            <li className='text-lg font-semibold py-2'>Scissor 101</li>
-            <li>Integrations & API</li>
-            <li>Pricing</li>
-          </ul>
-          <ul className='list-none'>
-            <li className='text-lg font-semibold py-2'>Social Media</li>
-            <li>Digital Marketing</li>
-            <li>Customer Service</li>
-            <li>For Developers</li>
-          </ul>
-          <ul className='list-none'>
-            <li className='text-lg font-semibold py-2'>Link Management</li>
-            <li>QR Codes</li>
-            <li>Link-in-bio</li>
-          </ul>
-          <ul className='list-none'>
-            <li className='text-lg font-semibold py-2'>About Scissor</li>
-            <li>Careers</li>
-            <li>Partners</li>
-            <li>Press</li>
-            <li>Contact</li>
-            <li>Reviews</li>
-          </ul>
-          <ul className='list-none'>
-            <li className='text-lg font-semibold py-2'>Blog</li>
-            <li>Resource Library</li>
-            <li>Developers</li>
-            <li>App Connectors</li>
-            <li>Support</li>
-            <li>Trust Center</li>
-            <li>Browser Extension</li>
-            <li>Mobile App</li>
-          </ul>
-          <ul className='list-none'>
-            <li className='text-lg font-semibold py-2'>Branded Links</li>
-            <li>Mobile Links</li>
-            <li>Campaign Management & Analytics</li>
-            <li>QR Code generation</li>
-          </ul>
-          <ul className='list-none'>
-            <li className='text-lg font-semibold py-2'>Privacy Policy</li>
-            <li>Cookie Policy</li>
-            <li>Terms of Service</li>
-            <li>Acceptable Use Policy</li>
-            <li>Code of Conduct</li>
-          </ul>
+
+        <div className='grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-8 sm:gap-12'>
+          <FooterColumn
+            title='Scissor 101'
+            links={['Integrations & API', 'Pricing']}
+          />
+          <FooterColumn
+            title='Social Media'
+            links={['Digital Marketing', 'Customer Service', 'For Developers']}
+          />
+          <FooterColumn
+            title='Link Management'
+            links={['QR Codes', 'Link-in-bio']}
+          />
+          <FooterColumn
+            title='About Scissor'
+            links={['Careers', 'Partners', 'Press', 'Contact', 'Reviews']}
+          />
+          <FooterColumn
+            title='Blog'
+            links={[
+              'Resource Library',
+              'Developers',
+              'App Connectors',
+              'Support',
+              'Trust Center',
+              'Browser Extension',
+              'Mobile App',
+            ]}
+          />
+          <FooterColumn
+            title='Branded Links'
+            links={[
+              'Mobile Links',
+              'Campaign Management & Analytics',
+              'QR Code generation',
+            ]}
+          />
+          <FooterColumn
+            title='Legal'
+            links={[
+              'Privacy Policy',
+              'Cookie Policy',
+              'Terms of Service',
+              'Acceptable Use Policy',
+              'Code of Conduct',
+            ]}
+          />
         </div>
       </div>
-      <aside className='text-white flex justify-end gap-4 pb-16 px-4'>
-        <Link href='#'>
-          <p>Terms of Service</p>
-        </Link>
-        <Image
-          src='/image/line.png'
-          alt='horizontal line vector'
-          width={2}
-          height={2}
-        />
-        <Link href='#'>
-          <p>Security</p>
-        </Link>
-        <Image
-          src='/image/line.png'
-          alt='horizontal line vector'
-          width={2}
-          height={2}
-        />
-        <Link href='#'>
-          <p>Scissor 2023</p>
-        </Link>
+
+      <aside className='flex justify-end gap-4 mt-8'>
+        <FooterLink href='#'>Terms of Service</FooterLink>
+        <FooterSeparator />
+        <FooterLink href='#'>Security</FooterLink>
+        <FooterSeparator />
+        <FooterLink href='#'>Scissor 2023</FooterLink>
       </aside>
+
       <Image
-        className='absolute left-0 bottom-0'
+        className='absolute left-0 bottom-0 hidden sm:block'
         src='/image/fleft.svg'
         alt='abstract'
         width={700}
         height={600}
       />
       <Image
-        className='absolute right-0 bottom-0 h-4/5'
+        className='absolute right-0 bottom-0 hidden sm:block h-4/5'
         src='/image/fright.svg'
         alt='abstract'
         width={700}

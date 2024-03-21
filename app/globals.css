@@ -85,14 +85,7 @@
 }
 
 /*FEATURES*/
-.info {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-   margin-top: 5rem;
-   margin-bottom: 5rem;
-}
+
 
 .why-scissors {
   display: grid;
@@ -110,13 +103,7 @@
   align-self: center;
 }
 
-.info-blocks {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 2.8rem;
-  row-gap: 6.4rem;
-}
+
 
 /*PRICING*/
 
@@ -151,4 +138,16 @@
 
 .price-btn {
   @apply flex gap-4;
+}
+
+/* tailwind.css or YourComponent.module.css */
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-blink {
+  animation: blink 3s infinite;
 }

@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 const Features = () => {
   return (
-    <div className='justify-content py-12 max-w-[80%]  md:flex text-white mx-auto gap-6 '>
-      <div className='max-w-[50%]'>
-        <p className='why-text font-bold  '>
+    <div className='justify-content  py-12 max-w-[80%]  lg:flex text-white mx-auto gap-6 '>
+      <div className='md:max-w-[50%]'>
+        <p className='md:why-text font-bold  text-3xl'>
           <span className='pr-4'>
             <Image
               src='/image/line.png'
@@ -14,9 +14,9 @@ const Features = () => {
               className='inline-block '
             />
           </span>
-          Why choose <span className='text-[#0065fe]'>Scissors</span>
+          Why choose <span className=' text-[#0065fe]'>Scissors</span>
         </p>
-        <p>
+        <p className='text-center md:text-start text-l py-3'>
           Scissors is the hub of everything that has to do with your link
           management. We shorten your URLs, allow you to create custom ones for
           your personal, business, event usage. Our swift QR code creation,
@@ -25,8 +25,8 @@ const Features = () => {
         </p>
       </div>
 
-      <div className='info-blocks grid grid-cols-1fr-1fr gap-x-8 gap-y-8 w-96'>
-        <div className='info-block flex flex-col flex-start'>
+      <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-x-[2.8rem] gap-y-[6.4rem]'>
+        <div className='flex flex-col flex-start md:items-start items-center'>
           <Image
             src='/image/icon1.png'
             alt='link icon'
@@ -35,14 +35,16 @@ const Features = () => {
             className='pb-5'
           />
           <div>
-            <p className='font-semibold text-3xl'>URL Shortening</p>
-            <p>
+            <p className='font-semibold md:text-2xl text-xl text-center md:text-start'>
+              URL Shortening
+            </p>
+            <p className='text-center md:text-start text-l py-3'>
               Scissors allows you to shorten URLs of your business, events.
               Shorten your URL at scale, URL redirects.
             </p>
           </div>
         </div>
-        <div className='info-block flex flex-col flex-start'>
+        <div className='flex flex-col flex-start md:items-start items-center'>
           <Image
             src='/image/icon2.png'
             alt='link icon'
@@ -51,14 +53,16 @@ const Features = () => {
             className='pb-5'
           />
           <div>
-            <p className='font-semibold text-3xl'>Custom URLs</p>
-            <p>
+            <p className='font-semibold md:text-2xl text-xl text-center md:text-start'>
+              Custom URLs
+            </p>
+            <p className='text-center md:text-start text-l py-3'>
               With Scissors, you can create custom URLs, with the length you
               want! A solution for socials and businesses.
             </p>
           </div>
         </div>
-        <div className='info-block flex flex-col  flex-start'>
+        <div className='flex flex-col flex-start md:items-start items-center'>
           <Image
             src='/image/icon3.png'
             alt='link icon'
@@ -67,14 +71,16 @@ const Features = () => {
             className='pb-5'
           />
           <div>
-            <p className='font-semibold text-3xl'>QR Codes</p>
-            <p>
+            <p className='font-semibold md:text-2xl text-xl text-center md:text-start'>
+              QR Codes
+            </p>
+            <p className='text-center md:text-start text-l py-3'>
               Generate QR codes to your business, events. Bring your audience
               and customers to your doorstep with this scan and go solution.
             </p>
           </div>
         </div>
-        <div className='info-block flex flex-col flex-start'>
+        <div className='flex flex-col flex-start md:items-start items-center'>
           <Image
             src='/image/icon4.png'
             alt='link icon'
@@ -83,8 +89,10 @@ const Features = () => {
             className='pb-5'
           />
           <div>
-            <p className='font-semibold text-3xl'>Data Analytics</p>
-            <p>
+            <p className='font-semibold md:text-2xl text-xl text-center md:text-start'>
+              Data Analytics
+            </p>
+            <p className='text-center md:text-start text-l py-3'>
               Receive data on the usage of either your shortened URL, custom
               URLs, or generated QR codes. Embedded to monitor progress.
             </p>

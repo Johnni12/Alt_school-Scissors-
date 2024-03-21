@@ -4,7 +4,7 @@ import React from 'react'
 
 const Pricing = () => {
   return (
-    <section className='py-16 bg-[#1f2128] max-w-[92%]  m-auto text-white'>
+    <section className='py-16 bg-[#1f2128] w-full md:max-w-[92%]  m-auto text-white'>
       <h2 className='text-center text-4xl font-bold mb-10'>
         A <span className='text-blue-500'>price perfect</span> for your needs.
       </h2>
@@ -12,7 +12,7 @@ const Pricing = () => {
         From catering for your personal, business, event, socials needs, you can
         be <br /> rest assured we have you in mind in our pricing.
       </p>
-      <div className='flex items-center justify-center px-12 m-auto py-12 max-w-[80%] cursor-pointer'>
+      <div className=' md:flex items-center justify-center px-12 m-auto py-12 md:max-w-[80%] cursor-pointer'>
         <div className='border border-blue-500 px-12 py-16 rounded-xl hover:border-2 hover:border-blue-200'>
           <div className='flex flex-col'>
             <h1 className='text-3xl my-2'>Basic</h1>
